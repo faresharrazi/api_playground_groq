@@ -1,12 +1,12 @@
 import os
-from dotenv import load_dotenv
-from groq import Groq
+from dotenv import load_dotenv  # type: ignore
+from groq import Groq  # type: ignore
 from typing import List, Dict, Generator
 
 # Load environment variables from .env file (only once, safe to call multiple times)
 load_dotenv()
 
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("GROQ_API_KEY")
 
 if not API_KEY:
     raise ValueError("Please make sure you have API_KEY in your .env file.")
